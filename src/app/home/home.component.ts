@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../data.service'
+import { DataService } from '../data.service'
 
 @Component({
   selector: 'app-home',
@@ -7,8 +7,8 @@ import {DataService} from '../data.service'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  h1Style : boolean = false
-  users : Object
+
+  users : Object;
 
   constructor(private data: DataService) { } //creating an instance of DataService through a dependency injection in the constructor
 
@@ -18,11 +18,6 @@ export class HomeComponent implements OnInit {
         this.users = data
         console.log(this.users)
       })
-  }
-
-  firstClick(){
-    if (this.h1Style === true) this.h1Style = false
-    else this.h1Style = true
   }
 
 }

@@ -1,7 +1,8 @@
-<h1 [ngStyle] = "{
-    'color' : h1Style ? 'gray' : 'black',
-    'font-size' : !h1Style ?  '1em' : '4em'
-}">Home</h1>
-<!-- gray class in sass file will be shown based on whether or not a given property (h1Style) is true or false   -->
-
-<button (click) = "firstClick()">Click me</button>
+<h1>Home</h1>
+ 
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data"> 
+    <img [src]="user.avatar">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>
