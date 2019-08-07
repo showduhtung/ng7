@@ -1,7 +1,4 @@
-<h1 [ngClass] = "{
-    'gray' : h1Style,
-    'large' : !h1Style
-}">Home</h1>
+<h1 [style.color] = "h1Style? 'gray' : 'black'">Home</h1>
 <!-- gray class in sass file will be shown based on whether or not a given property (h1Style) is true or false   -->
 
 <button (click) = "firstClick()">Click me</button>
